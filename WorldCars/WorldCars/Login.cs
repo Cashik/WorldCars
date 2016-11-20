@@ -35,8 +35,29 @@ namespace WorldCars
             {
                 // если пользователь в базе, то создаем окно и передаем туда логин, пароль
                 Form main = new MainForm(login, password);
-                main.Show();
                 Hide();
+                DialogResult r = main.ShowDialog();
+                switch (r)
+                {
+                    case (DialogResult.Cancel):
+                        {
+                            Close();
+                            break;
+                        }
+                    case (DialogResult.Retry):
+                        {
+                            Show();
+                            break;
+                        }
+                    default:
+                        {
+                            MessageBox.Show(r.ToString(), "Неизвестный результат работы программы");
+                            break;
+                        }
+                    
+                }
+
+
             }
             else
             {
@@ -56,7 +77,7 @@ namespace WorldCars
         private void info_Click(object sender, EventArgs e)
         {
             Form info = new Info();
-            info.Show();
+            info.ShowDialog();
         }
 
         private void exit_Click(object sender, EventArgs e)

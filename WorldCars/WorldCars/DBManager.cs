@@ -91,10 +91,11 @@ namespace WorldCars
                 return null;
             
         }
-        public List<CarInfoClass> ReturnAllCarInfo(string command)
+        //todo: ДОБАВИТЬретурн кар инфо по ид
+        public List<CarInfoClass> ReturnAllCarInfo()
         {
             List<CarInfoClass> result = new List<CarInfoClass>();
-
+            string command = string.Format("SELECT * FROM [CarInfo]");
             bool allFine = false;
             try
             {
@@ -126,6 +127,60 @@ namespace WorldCars
 
                     if (dr.IsDBNull(dr.GetOrdinal("image"))) buf.image = null;
                     else  buf.image = (byte[])dr[dr.GetOrdinal("image")];
+
+                    result.Add(buf);
+                }
+                dr.Close();
+                allFine = true;
+            }
+            catch (SqlException ex)
+            {
+                // Протоколировать исключение
+                Console.WriteLine(ex.Message);
+            }
+
+
+            if (allFine)
+                return result;
+            else
+                return null;
+
+        }
+        public List<CarInfoClass> ReturnAllCarByPromoterId(int promoter_id)
+        {
+            List<CarInfoClass> result = new List<CarInfoClass>();
+            string command = string.Format("SELECT * FROM [CarInfo] where promoter_id = '{0}'", promoter_id);
+            bool allFine = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(command, connection);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    CarInfoClass buf = new CarInfoClass();
+                    buf.id = (int)dr[dr.GetOrdinal("Id")];
+                    buf.body_type = (string)dr[dr.GetOrdinal("body_type")];
+                    buf.car_make = (string)dr[dr.GetOrdinal("car_make")];
+                    buf.promoter_id = (int)dr[dr.GetOrdinal("promoter_id")];
+                    if (dr.IsDBNull(dr.GetOrdinal("description"))) buf.description = "";
+                    else buf.description = (string)dr[dr.GetOrdinal("description")];
+
+                    buf.max_speed = (int)dr[dr.GetOrdinal("max_speed")];
+
+                    buf.cost = (int)dr[dr.GetOrdinal("cost")];
+                    buf.datetime = (DateTime)dr[dr.GetOrdinal("datetime")];
+
+                    if (dr.IsDBNull(dr.GetOrdinal("rating"))) buf.rating = 0;
+                    else buf.rating = (float)dr[dr.GetOrdinal("rating")];
+
+                    buf.drive_type = (int)dr[dr.GetOrdinal("drive_type")];
+
+                    buf.transmission = (int)dr[dr.GetOrdinal("transmission")];
+
+                    buf.name = (string)dr[dr.GetOrdinal("name")];
+
+                    if (dr.IsDBNull(dr.GetOrdinal("image"))) buf.image = null;
+                    else buf.image = (byte[])dr[dr.GetOrdinal("image")];
 
                     result.Add(buf);
                 }

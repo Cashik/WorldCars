@@ -134,6 +134,7 @@
             this.infoBtn.TabIndex = 22;
             this.infoBtn.Text = "Справка";
             this.infoBtn.UseVisualStyleBackColor = false;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // registrationBtn
             // 

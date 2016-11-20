@@ -51,9 +51,7 @@ namespace WorldCars
         {
             // remove all controls
             newestCarsInfoPanel.Controls.Clear();
-
-            string command = string.Format("SELECT * FROM [CarInfo]");
-            List<CarInfoClass> carInfos = Program.app.db.ReturnAllCarInfo(command);
+            List<CarInfoClass> carInfos = Program.app.db.ReturnAllCarInfo();
 
             // 
             carInfos.Sort((CarInfoClass x, CarInfoClass y) => x.datetime.CompareTo(y.datetime));
@@ -75,8 +73,7 @@ namespace WorldCars
             // remove all controls
             bestCarsInfoPanel.Controls.Clear();
 
-            string command = string.Format("SELECT * FROM [CarInfo]");
-            List<CarInfoClass> carInfos = Program.app.db.ReturnAllCarInfo(command);
+            List<CarInfoClass> carInfos = Program.app.db.ReturnAllCarInfo();
             //
             carInfos.Sort(delegate (CarInfoClass x, CarInfoClass y) { return x.rating.CompareTo(y.rating); });
 
@@ -258,6 +255,7 @@ namespace WorldCars
             bool readOnly = !userCanEditCarInfo;
 
             // добавляем элементы учитывая доступ пользователя к ним
+            ratingLbl.Text = Program.app.RatingToString((int)carInfo.rating)+"("+ carInfo.rating.ToString("F")+")";
 
             if (carInfo.image == null)
             {
@@ -464,16 +462,14 @@ namespace WorldCars
 
         private void closePictureBox_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
         private void logoutPictureBox_Click(object sender, EventArgs e)
         {
-            Form loginForm = new loginForm();
-            Hide();
-            loginForm.ShowDialog();
-            Show();
-
+            DialogResult = DialogResult.Retry;
+            Close();
         }
 
         private void homePagePictureBox_Click(object sender, EventArgs e)
@@ -618,7 +614,7 @@ namespace WorldCars
             int maxSpeed = ((speedMaxSearchTB.Text == "") ? -1 : Int32.Parse(speedMaxSearchTB.Text));
 
             // считываем все машины и отбрасываем ненужные
-            List<CarInfoClass> carsInfo = Program.app.db.ReturnAllCarInfo("select * from [CarInfo]");
+            List<CarInfoClass> carsInfo = Program.app.db.ReturnAllCarInfo();
 
 
             foreach (CarInfoClass carInfo in carsInfo)
@@ -791,8 +787,8 @@ namespace WorldCars
 
 
             // загрузка записей пользователя. Их видят все.
-            string command = string.Format("SELECT * FROM [CarInfo] where promoter_id = '{0}'", user.id);
-            List<CarInfoClass> carInfoList = Program.app.db.ReturnAllCarInfo(command);
+            
+            List<CarInfoClass> carInfoList = Program.app.db.ReturnAllCarByPromoterId(user.id);
             if (carInfoList != null)
             {
                 int k = userCommentsCount;
@@ -921,6 +917,15 @@ namespace WorldCars
             }
         }
 
+        private void aboutPictureBox_Click(object sender, EventArgs e)
+        {
+            Form info = new Info();
+            info.ShowDialog();
+        }
 
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

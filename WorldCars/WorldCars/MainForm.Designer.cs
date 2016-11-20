@@ -75,6 +75,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ratingPanelCI = new System.Windows.Forms.Panel();
+            this.ratingLbl = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.changeCarInfoImage = new System.Windows.Forms.Button();
             this.imageCI = new System.Windows.Forms.PictureBox();
@@ -155,7 +156,20 @@
             this.searchResultsPanel = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addCarInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAvaterPictureBox)).BeginInit();
@@ -173,6 +187,7 @@
             this.panel9.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.ratingPanelCI.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageCI)).BeginInit();
             this.panel6.SuspendLayout();
@@ -200,6 +215,7 @@
             this.tabPage4.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -303,6 +319,7 @@
             this.aboutPictureBox.TabIndex = 3;
             this.aboutPictureBox.TabStop = false;
             this.toolTip1.SetToolTip(this.aboutPictureBox, "Подсказка");
+            this.aboutPictureBox.Click += new System.EventHandler(this.aboutPictureBox_Click);
             // 
             // logoutPictureBox
             // 
@@ -628,7 +645,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(690, 350);
+            this.tabPage1.Size = new System.Drawing.Size(690, 353);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -717,7 +734,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(690, 350);
+            this.tabPage2.Size = new System.Drawing.Size(690, 353);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -743,10 +760,23 @@
             // ratingPanelCI
             // 
             this.ratingPanelCI.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ratingPanelCI.Controls.Add(this.ratingLbl);
             this.ratingPanelCI.Location = new System.Drawing.Point(5, 153);
             this.ratingPanelCI.Name = "ratingPanelCI";
             this.ratingPanelCI.Size = new System.Drawing.Size(188, 20);
             this.ratingPanelCI.TabIndex = 12;
+            // 
+            // ratingLbl
+            // 
+            this.ratingLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingLbl.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ratingLbl.Location = new System.Drawing.Point(0, 0);
+            this.ratingLbl.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
+            this.ratingLbl.Name = "ratingLbl";
+            this.ratingLbl.Size = new System.Drawing.Size(188, 20);
+            this.ratingLbl.TabIndex = 2;
+            this.ratingLbl.Text = "rating";
+            this.ratingLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel12
             // 
@@ -1328,7 +1358,7 @@
             this.panel10.Controls.Add(this.tableLayoutPanel3);
             this.panel10.Location = new System.Drawing.Point(5, 134);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(202, 70);
+            this.panel10.Size = new System.Drawing.Size(210, 70);
             this.panel10.TabIndex = 14;
             // 
             // tableLayoutPanel3
@@ -1337,7 +1367,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel3.Controls.Add(this.label14, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.userRoleTextUCPanel, 1, 1);
@@ -1351,7 +1381,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(202, 70);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(210, 70);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label14
@@ -1382,7 +1412,7 @@
             this.userRoleTextUCPanel.Location = new System.Drawing.Point(86, 22);
             this.userRoleTextUCPanel.Margin = new System.Windows.Forms.Padding(0);
             this.userRoleTextUCPanel.Name = "userRoleTextUCPanel";
-            this.userRoleTextUCPanel.Size = new System.Drawing.Size(114, 18);
+            this.userRoleTextUCPanel.Size = new System.Drawing.Size(122, 18);
             this.userRoleTextUCPanel.TabIndex = 14;
             // 
             // userNameTextUCPanel
@@ -1391,7 +1421,7 @@
             this.userNameTextUCPanel.Location = new System.Drawing.Point(86, 2);
             this.userNameTextUCPanel.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTextUCPanel.Name = "userNameTextUCPanel";
-            this.userNameTextUCPanel.Size = new System.Drawing.Size(114, 18);
+            this.userNameTextUCPanel.Size = new System.Drawing.Size(122, 18);
             this.userNameTextUCPanel.TabIndex = 13;
             // 
             // userCreateAcLablePanel
@@ -1400,7 +1430,7 @@
             this.userCreateAcLablePanel.Location = new System.Drawing.Point(86, 42);
             this.userCreateAcLablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.userCreateAcLablePanel.Name = "userCreateAcLablePanel";
-            this.userCreateAcLablePanel.Size = new System.Drawing.Size(114, 26);
+            this.userCreateAcLablePanel.Size = new System.Drawing.Size(122, 26);
             this.userCreateAcLablePanel.TabIndex = 8;
             // 
             // label21
@@ -1668,12 +1698,150 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.AutoScroll = true;
+            this.tabPage5.Controls.Add(this.label45);
+            this.tabPage5.Controls.Add(this.label46);
+            this.tabPage5.Controls.Add(this.label43);
+            this.tabPage5.Controls.Add(this.label44);
+            this.tabPage5.Controls.Add(this.label41);
+            this.tabPage5.Controls.Add(this.label42);
+            this.tabPage5.Controls.Add(this.label39);
+            this.tabPage5.Controls.Add(this.label40);
+            this.tabPage5.Controls.Add(this.label36);
+            this.tabPage5.Controls.Add(this.label38);
+            this.tabPage5.Controls.Add(this.label37);
+            this.tabPage5.Controls.Add(this.label35);
+            this.tabPage5.Controls.Add(this.label32);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(690, 373);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.tabPage5.Size = new System.Drawing.Size(690, 353);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "x";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label39
+            // 
+            this.label39.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label39.Location = new System.Drawing.Point(1, 503);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(669, 268);
+            this.label39.TabIndex = 15;
+            this.label39.Text = resources.GetString("label39.Text");
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.Location = new System.Drawing.Point(8, 460);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(664, 43);
+            this.label40.TabIndex = 14;
+            this.label40.Text = "Уровни доверия к пользователю";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label36
+            // 
+            this.label36.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(1, 216);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(669, 250);
+            this.label36.TabIndex = 13;
+            this.label36.Text = resources.GetString("label36.Text");
+            this.label36.Click += new System.EventHandler(this.label36_Click);
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label38.Location = new System.Drawing.Point(8, 173);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(664, 43);
+            this.label38.TabIndex = 12;
+            this.label38.Text = "Вход и регистрация";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label37
+            // 
+            this.label37.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(3, 77);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(669, 96);
+            this.label37.TabIndex = 11;
+            this.label37.Text = resources.GetString("label37.Text");
+            // 
+            // label35
+            // 
+            this.label35.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.Location = new System.Drawing.Point(13, 52);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(659, 25);
+            this.label35.TabIndex = 9;
+            this.label35.Text = "Обшая информация";
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(297, 11);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(90, 25);
+            this.label32.TabIndex = 8;
+            this.label32.Text = "Помощь";
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(1, 814);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(669, 115);
+            this.label41.TabIndex = 17;
+            this.label41.Text = resources.GetString("label41.Text");
+            // 
+            // label42
+            // 
+            this.label42.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(8, 771);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(664, 43);
+            this.label42.TabIndex = 16;
+            this.label42.Text = "Аккаунт";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Location = new System.Drawing.Point(1, 972);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(669, 93);
+            this.label43.TabIndex = 19;
+            this.label43.Text = resources.GetString("label43.Text");
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label44.Location = new System.Drawing.Point(8, 929);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(664, 43);
+            this.label44.TabIndex = 18;
+            this.label44.Text = "Поиск автомобилей";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label45
+            // 
+            this.label45.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label45.Location = new System.Drawing.Point(1, 1108);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(669, 259);
+            this.label45.TabIndex = 21;
+            this.label45.Text = resources.GetString("label45.Text");
+            // 
+            // label46
+            // 
+            this.label46.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label46.Location = new System.Drawing.Point(8, 1065);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(664, 43);
+            this.label46.TabIndex = 20;
+            this.label46.Text = "Прсмотр, создание, изменение и удаление записей";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // MainForm
             // 
@@ -1717,6 +1885,7 @@
             this.tabPage2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.ratingPanelCI.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageCI)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -1762,6 +1931,7 @@
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1894,5 +2064,19 @@
         private System.Windows.Forms.Panel searchResultsPanel;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label ratingLbl;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
     }
 }
