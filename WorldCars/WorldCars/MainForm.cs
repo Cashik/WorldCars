@@ -24,7 +24,7 @@ namespace WorldCars
 
         // статус редактирования
         bool editOn = false;
-        //App app = new App();
+
         public MainForm(string login,string pswd)
         {
             InitializeComponent();
@@ -107,7 +107,7 @@ namespace WorldCars
             {
                 MemoryStream ms = new MemoryStream(Program.app.user.image);
                 userAvaterPictureBox.Image = Image.FromStream(ms);
-                ms.Close();
+                //ms.Close();
             }
 
 
@@ -255,7 +255,7 @@ namespace WorldCars
             bool readOnly = !userCanEditCarInfo;
 
             // добавляем элементы учитывая доступ пользователя к ним
-            ratingLbl.Text = Program.app.RatingToString((int)carInfo.rating)+"("+ carInfo.rating.ToString("F")+")";
+            ratingLbl.Text = App.RatingToString((int)carInfo.rating)+"("+ carInfo.rating.ToString("F")+")";
 
             if (carInfo.image == null)
             {
@@ -265,7 +265,7 @@ namespace WorldCars
             {
                 MemoryStream ms = new MemoryStream(carInfo.image);
                 imageCI.Image = Image.FromStream(ms);
-                ms.Close();
+
             }
 
 
@@ -502,8 +502,8 @@ namespace WorldCars
 
         private void userPagePictureBox_Click(object sender, EventArgs e)
         {
-
-            tabControl1.SelectedTab = tabPage3;
+            tabControl1.SelectTab(tabPage3);
+            //tabControl1.SelectedTab = tabPage3;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -562,7 +562,7 @@ namespace WorldCars
             MemoryStream ms = new MemoryStream();
             imageCI.Image.Save(ms, imageCI.Image.RawFormat);
             newCarInfo.image = ms.GetBuffer();
-            ms.Close();
+            //ms.Close();
 
             if (currentCarInfoId == -1)
             {
@@ -712,32 +712,40 @@ namespace WorldCars
             bool readOnly = !(isUserAccount && editOn);
 
             // включаем панель редактирования
-            if (isUserAccount || Program.app.user.access_level >= 3)
+            if (isUserAccount || Program.app.user.access_level >= 3 )
             {
                 editUserPanel.Visible = true;
-                saveUserBtn.Visible = editUserBtn.Visible = true;
+                if (editOn)
+                {
+                    saveUserBtn.Visible = true;
+                    editUserBtn.Visible = false;
+                }
+                else
+                {
+                    saveUserBtn.Visible = false;
+                    editUserBtn.Visible = true;
+                }
+                
                     
             }
 
             // имя
             userNameTextUCPanel.Controls.Add((new RRTB(this, "userNameTextUC", userNameTextUCPanel.Width, readOnly, user.name)));
             // роль
-            if (Program.app.user.access_level >= 3 && editOn)
+            ComboBox userRoleComboBox = new ComboBox();
+            userRoleComboBox.Items.Add("пользователь");
+            userRoleComboBox.Items.Add("модератор");
+            userRoleComboBox.Items.Add("администраротр");
+            userRoleComboBox.SelectedIndex = user.access_level - 1;
+            userRoleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            userRoleComboBox.Dock = DockStyle.Fill;
+            userRoleComboBox.Name = "userRoleComboBox";
+            if (!(Program.app.user.access_level >= 3 && editOn))
             {
-                ComboBox userRoleComboBox = new ComboBox();
-                userRoleComboBox.Items.Add("пользователь");
-                userRoleComboBox.Items.Add("модератор");
-                userRoleComboBox.Items.Add("администраротр");
-                userRoleComboBox.SelectedIndex = user.access_level - 1;
-                userRoleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-                userRoleComboBox.Dock = DockStyle.Fill;
-                userRoleComboBox.Name = "userRoleComboBox";
-                userRoleTextUCPanel.Controls.Add(userRoleComboBox);
+                userRoleComboBox.Enabled = false;
             }
-            else
-            {
-                userRoleTextUCPanel.Controls.Add((new RRTB(this, "userRoleTextUC", userRoleTextUCPanel.Width, readOnly, App.ReturnRole(user.access_level))));
-            }
+            userRoleTextUCPanel.Controls.Add(userRoleComboBox);
+
             // дата
             userCreateAcLablePanel.Controls.Add((new RRTB(this, "userDateTextUC", userCreateAcLablePanel.Width, true, user.datetime.ToString())));
 
@@ -748,7 +756,6 @@ namespace WorldCars
             else
             {
                 changeUserImageBtn.Visible = false;
-
             }
 
             if (user.image == null)
@@ -759,7 +766,6 @@ namespace WorldCars
             {
                 MemoryStream ms = new MemoryStream(user.image);
                 userAvatarPB.Image = Image.FromStream(ms);
-                ms.Close();
             }
 
             // комментарии чугого пользователя можно смотреть только администраторам
@@ -837,10 +843,13 @@ namespace WorldCars
             if (b.Length > 0) newUserData.access_level = ((ComboBox)b[0]).SelectedIndex + 1;
             else  newUserData.access_level = -1;
 
-            MemoryStream ms = new MemoryStream();
-            userAvatarPB.Image.Save(ms, userAvatarPB.Image.RawFormat);
-            newUserData.image = ms.GetBuffer();
-            ms.Close();
+            if (userAvatarPB.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                userAvatarPB.Image.Save(ms, userAvatarPB.Image.RawFormat);
+                newUserData.image = ms.GetBuffer();
+            }
+            //
 
             editOn = false;
             if (Program.app.db.ChangeUserInfo(newUserData))
@@ -897,7 +906,7 @@ namespace WorldCars
 
         private void deleteCarInfoBtn_Click(object sender, EventArgs e)
         {
-            Program.app.db.DeleteCarInfo(currentCarInfoId);
+            Program.app.db.DeleteTableById("CarInfo",currentCarInfoId);
             currentCarInfoId = -1;
             tabControl1.SelectedTab = tabPage1;
 
@@ -919,7 +928,7 @@ namespace WorldCars
 
         private void aboutPictureBox_Click(object sender, EventArgs e)
         {
-            Form info = new Info();
+            Form info = new InfoForm();
             info.ShowDialog();
         }
 

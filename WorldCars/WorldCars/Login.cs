@@ -76,8 +76,7 @@ namespace WorldCars
 
         private void info_Click(object sender, EventArgs e)
         {
-            Form info = new Info();
-            info.ShowDialog();
+            App.ShowHelp();
         }
 
         private void exit_Click(object sender, EventArgs e)

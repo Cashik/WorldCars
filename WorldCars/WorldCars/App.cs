@@ -63,7 +63,7 @@ namespace WorldCars
             return result;
         }
 
-        public string RatingToString(int rating)
+        static public string RatingToString(int rating)
         {
             string result="";
             for (int i = 0; i < rating; i++)
@@ -92,6 +92,13 @@ namespace WorldCars
             }
             return result;
         }
+
+        static public void ShowHelp()
+        {
+            InfoForm info = new InfoForm();
+            info.ShowDialog();
+        }
+
         static public string ReturnRole(int role)
         {
             string result;
@@ -108,6 +115,7 @@ namespace WorldCars
             }
             return result;
         }
+        
     }
     
 }

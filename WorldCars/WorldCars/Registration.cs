@@ -86,7 +86,7 @@ namespace WorldCars
 
         private void infoBtn_Click(object sender, EventArgs e)
         {
-            Form info = new Info();
+            Form info = new InfoForm();
             info.ShowDialog();
         }
     }

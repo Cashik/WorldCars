@@ -572,7 +572,8 @@ namespace WorldCars
         {
             //add car info
             bool allFine = false;
-            string Command = "UPDATE [User] set name=@name,access_level=@access_level,image=@image where id='" + newUserData.id.ToString() + "'";
+            string Command = string.Format("UPDATE [User] set name=@name{0},image=@image where id='{1}' ",
+                ((newUserData.id!=-1)?",access_level = @access_level":""), newUserData.id.ToString());
             try
             {
                 using (SqlCommand cmd = new SqlCommand(Command, connection))
@@ -639,11 +640,12 @@ namespace WorldCars
 
         internal bool DeleteUserById(int userId)
         {
+            // TODO: зафигачить каскадное удаление
             bool result = false;
 
             // сначала нужно удалить все комментарии
             // принадлежащие этому пользователю 
-            string Command = string.Format("Delete from [Comment] where user_id = '{0}'", userId);
+            string Command = string.Format("Delete from [Comment] where user_id in ('{0}')", userId);
             using (SqlCommand cmd = new SqlCommand(Command, connection))
             {
                 try

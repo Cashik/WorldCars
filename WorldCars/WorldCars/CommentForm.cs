@@ -42,7 +42,7 @@ namespace WorldCars
             }
 
             nameLbl.Text = user.name;
-            ratingLbl.Text = Program.app.RatingToString(comment.rating);
+            ratingLbl.Text = App.RatingToString(comment.rating);
             dateLbl.Text = comment.datetime.ToString();
 
         }

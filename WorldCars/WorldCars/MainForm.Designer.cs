@@ -156,6 +156,12 @@
             this.searchResultsPanel = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -164,12 +170,6 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addCarInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAvaterPictureBox)).BeginInit();
@@ -1358,7 +1358,7 @@
             this.panel10.Controls.Add(this.tableLayoutPanel3);
             this.panel10.Location = new System.Drawing.Point(5, 134);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(210, 70);
+            this.panel10.Size = new System.Drawing.Size(214, 70);
             this.panel10.TabIndex = 14;
             // 
             // tableLayoutPanel3
@@ -1367,7 +1367,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel3.Controls.Add(this.label14, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.userRoleTextUCPanel, 1, 1);
@@ -1381,7 +1381,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(210, 70);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(214, 70);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label14
@@ -1412,7 +1412,7 @@
             this.userRoleTextUCPanel.Location = new System.Drawing.Point(86, 22);
             this.userRoleTextUCPanel.Margin = new System.Windows.Forms.Padding(0);
             this.userRoleTextUCPanel.Name = "userRoleTextUCPanel";
-            this.userRoleTextUCPanel.Size = new System.Drawing.Size(122, 18);
+            this.userRoleTextUCPanel.Size = new System.Drawing.Size(126, 18);
             this.userRoleTextUCPanel.TabIndex = 14;
             // 
             // userNameTextUCPanel
@@ -1421,7 +1421,7 @@
             this.userNameTextUCPanel.Location = new System.Drawing.Point(86, 2);
             this.userNameTextUCPanel.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTextUCPanel.Name = "userNameTextUCPanel";
-            this.userNameTextUCPanel.Size = new System.Drawing.Size(122, 18);
+            this.userNameTextUCPanel.Size = new System.Drawing.Size(126, 18);
             this.userNameTextUCPanel.TabIndex = 13;
             // 
             // userCreateAcLablePanel
@@ -1430,7 +1430,7 @@
             this.userCreateAcLablePanel.Location = new System.Drawing.Point(86, 42);
             this.userCreateAcLablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.userCreateAcLablePanel.Name = "userCreateAcLablePanel";
-            this.userCreateAcLablePanel.Size = new System.Drawing.Size(122, 26);
+            this.userCreateAcLablePanel.Size = new System.Drawing.Size(126, 26);
             this.userCreateAcLablePanel.TabIndex = 8;
             // 
             // label21
@@ -1720,6 +1720,63 @@
             this.tabPage5.Text = "x";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label45
+            // 
+            this.label45.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label45.Location = new System.Drawing.Point(1, 1108);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(669, 259);
+            this.label45.TabIndex = 21;
+            this.label45.Text = resources.GetString("label45.Text");
+            // 
+            // label46
+            // 
+            this.label46.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label46.Location = new System.Drawing.Point(8, 1065);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(664, 43);
+            this.label46.TabIndex = 20;
+            this.label46.Text = "Прсмотр, создание, изменение и удаление записей";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Location = new System.Drawing.Point(1, 972);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(669, 93);
+            this.label43.TabIndex = 19;
+            this.label43.Text = resources.GetString("label43.Text");
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label44.Location = new System.Drawing.Point(8, 929);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(664, 43);
+            this.label44.TabIndex = 18;
+            this.label44.Text = "Поиск автомобилей";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(1, 814);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(669, 115);
+            this.label41.TabIndex = 17;
+            this.label41.Text = resources.GetString("label41.Text");
+            // 
+            // label42
+            // 
+            this.label42.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(8, 771);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(664, 43);
+            this.label42.TabIndex = 16;
+            this.label42.Text = "Аккаунт";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // label39
             // 
             this.label39.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1785,63 +1842,6 @@
             this.label32.Size = new System.Drawing.Size(90, 25);
             this.label32.TabIndex = 8;
             this.label32.Text = "Помощь";
-            // 
-            // label41
-            // 
-            this.label41.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(1, 814);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(669, 115);
-            this.label41.TabIndex = 17;
-            this.label41.Text = resources.GetString("label41.Text");
-            // 
-            // label42
-            // 
-            this.label42.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label42.Location = new System.Drawing.Point(8, 771);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(664, 43);
-            this.label42.TabIndex = 16;
-            this.label42.Text = "Аккаунт";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label43
-            // 
-            this.label43.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label43.Location = new System.Drawing.Point(1, 972);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(669, 93);
-            this.label43.TabIndex = 19;
-            this.label43.Text = resources.GetString("label43.Text");
-            // 
-            // label44
-            // 
-            this.label44.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label44.Location = new System.Drawing.Point(8, 929);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(664, 43);
-            this.label44.TabIndex = 18;
-            this.label44.Text = "Поиск автомобилей";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label45
-            // 
-            this.label45.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label45.Location = new System.Drawing.Point(1, 1108);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(669, 259);
-            this.label45.TabIndex = 21;
-            this.label45.Text = resources.GetString("label45.Text");
-            // 
-            // label46
-            // 
-            this.label46.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label46.Location = new System.Drawing.Point(8, 1065);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(664, 43);
-            this.label46.TabIndex = 20;
-            this.label46.Text = "Прсмотр, создание, изменение и удаление записей";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // MainForm
             // 
