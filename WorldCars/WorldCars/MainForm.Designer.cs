@@ -624,13 +624,13 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Location = new System.Drawing.Point(0, -3);
+            this.tabControl1.Location = new System.Drawing.Point(0, -23);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(698, 382);
+            this.tabControl1.Size = new System.Drawing.Size(698, 402);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
@@ -645,7 +645,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(690, 353);
+            this.tabPage1.Size = new System.Drawing.Size(690, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -1358,7 +1358,7 @@
             this.panel10.Controls.Add(this.tableLayoutPanel3);
             this.panel10.Location = new System.Drawing.Point(5, 134);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(214, 70);
+            this.panel10.Size = new System.Drawing.Size(216, 70);
             this.panel10.TabIndex = 14;
             // 
             // tableLayoutPanel3
@@ -1367,7 +1367,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel3.Controls.Add(this.label14, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.userRoleTextUCPanel, 1, 1);
@@ -1381,7 +1381,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(214, 70);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(216, 70);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label14
@@ -1412,7 +1412,7 @@
             this.userRoleTextUCPanel.Location = new System.Drawing.Point(86, 22);
             this.userRoleTextUCPanel.Margin = new System.Windows.Forms.Padding(0);
             this.userRoleTextUCPanel.Name = "userRoleTextUCPanel";
-            this.userRoleTextUCPanel.Size = new System.Drawing.Size(126, 18);
+            this.userRoleTextUCPanel.Size = new System.Drawing.Size(128, 18);
             this.userRoleTextUCPanel.TabIndex = 14;
             // 
             // userNameTextUCPanel
@@ -1421,7 +1421,7 @@
             this.userNameTextUCPanel.Location = new System.Drawing.Point(86, 2);
             this.userNameTextUCPanel.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTextUCPanel.Name = "userNameTextUCPanel";
-            this.userNameTextUCPanel.Size = new System.Drawing.Size(126, 18);
+            this.userNameTextUCPanel.Size = new System.Drawing.Size(128, 18);
             this.userNameTextUCPanel.TabIndex = 13;
             // 
             // userCreateAcLablePanel
@@ -1430,7 +1430,7 @@
             this.userCreateAcLablePanel.Location = new System.Drawing.Point(86, 42);
             this.userCreateAcLablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.userCreateAcLablePanel.Name = "userCreateAcLablePanel";
-            this.userCreateAcLablePanel.Size = new System.Drawing.Size(126, 26);
+            this.userCreateAcLablePanel.Size = new System.Drawing.Size(128, 26);
             this.userCreateAcLablePanel.TabIndex = 8;
             // 
             // label21
