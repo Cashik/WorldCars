@@ -11,7 +11,6 @@ namespace WorldCars
     {
         SqlConnectionStringBuilder connectStringBuilder;
         public SqlConnection connection;
-
         public DBManager()
         {
             connectStringBuilder = new SqlConnectionStringBuilder();
@@ -51,8 +50,6 @@ namespace WorldCars
             Close();
             return Connect();
         }
-
-
         public List<CommentClass> ReturnAllCommentsByAtr(string atribute,int value)
         {
             List<CommentClass> result = new  List<CommentClass>();
@@ -91,7 +88,6 @@ namespace WorldCars
                 return null;
             
         }
-        //todo: ДОБАВИТЬретурн кар инфо по ид
         public List<CarInfoClass> ReturnAllCarInfo()
         {
             List<CarInfoClass> result = new List<CarInfoClass>();
@@ -232,12 +228,10 @@ namespace WorldCars
                 return null;
 
         }
-
         public UserClass ReturnUserById(int promoter_id)
         {
             UserClass result = new UserClass();
             string command = string.Format("SELECT * FROM [User] WHERE id ='{0}'", promoter_id);
-
             bool allFine = false;
             try
             {
@@ -253,9 +247,7 @@ namespace WorldCars
                     result.datetime = (DateTime)dr[dr.GetOrdinal("datetime")];
                     if (dr.IsDBNull(dr.GetOrdinal("image"))) result.image = null;
                     else result.image = (byte[])dr[dr.GetOrdinal("image")];
-
                     allFine = true;
-
                 }
                 dr.Close();
             }
@@ -264,8 +256,6 @@ namespace WorldCars
                 // Протоколировать исключение
                 Console.WriteLine(ex.Message);
             }
-
-
             if (allFine)
                 return result;
             else
@@ -308,7 +298,6 @@ namespace WorldCars
             else
                 return null;
         }
-
         public bool UserExist(string login)
         {
             bool result = false;
@@ -385,8 +374,6 @@ namespace WorldCars
             else
                 return null;
         }
-      
-
         public bool AddComment(CommentClass comment)
         {
             //add comment
@@ -416,7 +403,6 @@ namespace WorldCars
 
             return allFine;
         }
-        // возвращает id созданной таблицы
         public int AddCarInfo(CarInfoClass carInfo)
         {
             //add car info
